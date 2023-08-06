@@ -45,7 +45,7 @@ public class App {
                     System.out.println("Write birth number of person you are looking for:");
                     String searchBN = reader.readLine();
                     Person searchPerson = people.get(searchBN.replace("/", ""));
-                    if (searchPerson != null) System.out.println(searchPerson.getFullNameWithBN());
+                    if (searchPerson != null) System.out.println(searchPerson.getFullNameWithAge());
                     else System.out.println("Not found.");
                     break;
                 case "delete":
@@ -54,12 +54,12 @@ public class App {
                     String deleteBN = reader.readLine();
                     Person deletePerson = people.get(deleteBN.replace("/", ""));
                     if (deletePerson != null) {
-                        System.out.println(deletePerson.getFullNameWithBN());
+                        System.out.println(deletePerson.getFullNameWithAge());
                         System.out.println("Are you sure? (Y/N) This operation is irreversible!");
                         String agree = reader.readLine();
                         if (agree.toUpperCase() == "Y") {
                             people.remove(deleteBN.replace("/", ""));
-                            System.out.println(deletePerson.getFullNameWithBN());
+                            System.out.println(deletePerson.getFullNameWithAge());
                             System.out.println("Has been deleted");
                         }
                     }

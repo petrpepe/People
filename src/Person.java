@@ -16,11 +16,11 @@ public class Person {
         return this.birthNumber;
     }
 
-    public String getFullNameWithBN() {
-        return this.firstName + " " + this.lastName + " " + this.birthNumber;
+    public String getFullNameWithAge() {
+        return this.firstName + " " + this.lastName + " " + this.getAgeFromBN();
     }
 
-    public Integer getAgeFromBN() {
+    private Integer getAgeFromBN() {
         String birthNumber = getBirthNumber();
         Integer year = Integer.parseInt(birthNumber.substring(0, 2));
         Integer month = Integer.parseInt(birthNumber.substring(2, 4));
